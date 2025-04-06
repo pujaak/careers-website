@@ -1,10 +1,10 @@
-from flask import Flask
+from flask import Flask, render_template
 # create a Flask app
 app = Flask(__name__)
 # register a route to the application
 @app.route('/')
 def hello():
-  return "Hello World! baby"
+  return render_template('home.html')
 
 # check if we are running this app.py file as script, as python app.py
 if __name__ == "__main__":
